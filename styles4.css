@@ -1,129 +1,162 @@
+:root{
+  --darkorange:#ff8c00;
+  --liteorange: #FFCB42;
+  --blue: #277BC0;
+  --white: #FFF4CF;
+}
 html, body{
-  width: 100vw;
-  height: 100vh;
-  padding: 0px;
-  margin: 0px;
-background-color: white;
-  font-family: sans-serif;
-  min-width: 500px;
-
+  width: 100%;
+  min-width: 350px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Sans-serif;
+  background-color: var(--white);
+}
+#header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--liteorange);
+  z-index: 1;
+}
+#header h1{
+  padding-right: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
 }
 #header-img{
+  width: 130px;
+  height: 50px;
+  transform: translateY(20px);
+}
+#nav-bar{
   display: flex;
-  max-width: 125px;
-  padding-right: 5px;
-  padding-top: 10px;
-}
-header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    background-color: white;
-    z-index: 1;
-}
-#nav-bar {
-  position: absolute;
-  padding-left: 25px;
-  padding-bottom: 10px;
-  top: 50%;
-  left: 60%;
-  justify-content: left;
+  margin-right: 15px;
 }
 #nav-bar a{
+  width: auto;
+  height: 30%;
+  padding: 15px;
+  margin: 5px;
   text-decoration: none;
-  color: black;
-  padding: 5px;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  border: 2px solid var(--blue);
+  box-shadow: 5px 5px;
+  border-radius: 25px;
+}
+.nav-link{ 
+  justify-content: flex-end;
 }
 #nav-bar a:hover{
-  text-decoration: underline;
+  transform: translateY(5px);
 }
+@media(max-width: 550px){
+  #header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 175px;
+  }
+  #nav-bar{
+    margin: auto; 
+    width: 100%;
+  }
+  #nav-bar a{
+    box-shadow:0px 0px;
+    width: 100%;
+  }
+  #form-section{
+    padding-top: 120px;
+  }
+}
+/*BEFORE SECTIONS STARTS*/
 #form-section{
-  padding: 5px;
-  padding-right: 25px;
-  margin-top: 120px;
-}
-#form-section form{
-  margin: auto;
-  width: 100%;
   text-align: center;
+  margin: auto;
+  margin-top: 100px;
+}
+fieldset{
+  border-radius: 5px;
+  box-shadow: 1px 1px;
+}
+#features{
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid orange;
+  border-radius: 5px;
+}
+.feature{
+  text-align: center; 
+}
+.feature p{
+  border-top: 1px solid var(--liteorange);
+  padding-top: 5px;
+  font-size: 20px;
+  line-height: 1.2;
+  
 }
 i{
   color: darkorange;
   font-size: 2.2em;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px;
   transform:translateY(5px);
-  line-height: 1.5em;
+
 }
-.feature h1{
-  display: inline-block;
+#features-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.feature p{
-  font-size: 1.2em;
-  margin: 0;
-  padding-bottom: 10px;
+#features h1{
+  color: var(--darkorange);
+  padding: 0px;
+  margin: 0px; 
+}
+#video-section{
+  display: flex;
 }
 #video{
-  display: block;
+  width: 90%;
+  height: 415px;
+  padding: 15px;
   margin: auto;
-}
-#pricing li{
-  list-style: none;
-  text-align: left;
 }
 #pricing{
   display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 5px;
+  flex-direction: row;
+  text-align: center;
 }
 .product{
-  border: 1px solid black;
-  margin: 10px; 
-  line-height: 2em;
-  text-align: center; 
-  margin-right: 50px;
-}
-.product-name{
-  background-color: lightgrey;
   width: 100%;
-  display: block;
+  border: 1px solid orange;
+  border-radius: 5px;
+  margin: 5px;
+
+}
+.product h2{
+  background-color: var(--blue);
   margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
 }
-.price{
-  font-size: 1.8em;
-}
-.product ul{
-  margin: auto;
-}
-.product li{
-  font-size: 1.2em;
-  padding: 10px;
+#pricing ol{
+  list-style: none;
 }
 .btn{
-  transform: translateY(-10px);
-  padding: 20px;
-  margin: auto;
-  font-size: 1em;
+  margin-bottom: 5px;
 }
-
-@media (max-width: 801px) {
-  #nav-bar {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  #nav-bar a {
-    padding-bottom: 5px;
-  }
-  #form-section{
-  margin-top: 125px;
-  margin-bottom: 10px;
-}
+@media(max-width: 550px){
   #pricing{
     flex-direction: column;
+    width: 85%;
+    margin: auto;
   }
 }
